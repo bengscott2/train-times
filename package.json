@@ -4,20 +4,16 @@
   "description": "A bash tool that returns train times for a given station.",
   "main": "app.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "node ./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/bengscott2/train-times.git"
   },
   "keywords": [
-    "train",
-    "times",
-    "bash",
-    "tool",
-    "command",
-    "line",
-    "tool"
+    "train times",
+    "cli",
+    "get train times"
   ],
   "author": "Benjamin Scott",
   "license": "MIT",
@@ -26,9 +22,12 @@
   },
   "homepage": "https://github.com/bengscott2/train-times#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "arg": "^4.1.1",
+    "esm": "^3.2.25",
+    "inquirer": "^7.0.0"
   },
-  "devDependencies": {
-    "jasmine": "^3.4.0"
+  "devDependencies": {},
+  "bin": {
+    "train-times": "bin/train-times"
   }
 }
