@@ -2,7 +2,7 @@
   "name": "train-times",
   "version": "1.0.0",
   "description": "A bash tool that returns train times for a given station.",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha"
   },
@@ -23,8 +23,10 @@
   "homepage": "https://github.com/bengscott2/train-times#readme",
   "dependencies": {
     "arg": "^4.1.1",
+    "chai": "^4.2.0",
     "esm": "^3.2.25",
-    "inquirer": "^7.0.0"
+    "inquirer": "^7.0.0",
+    "mocha": "^6.2.0"
   },
   "devDependencies": {},
   "bin": {
