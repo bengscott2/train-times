@@ -1,7 +1,8 @@
 const argsParser = require('./argsParser');
+const getTrainTimes = require('./getTrainTimes')
 
 export function trainTimes(args) {
-  console.log(args)
   var options = argsParser(args)
   console.log(options)
+  getTrainTimes('Shoreditch')
 }
