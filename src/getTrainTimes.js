@@ -15,12 +15,10 @@ module.exports = async function getTrainTimes (station, trainTimesPrinter) {
   await axios.get(apiUrl)
   .then(function (response) {
     apiResponse = response
+    console.log(trainTimesPrinter(response.data))
   })
   .catch(function (error) {
-    apiResponse = response
-  })
-  .finally(function () {
-    console.log(trainTimesPrinter(apiResponse.data))
+    console.log(error)
   })
   return apiResponse.data
 }
