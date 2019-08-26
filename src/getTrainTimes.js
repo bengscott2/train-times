@@ -1,26 +1,19 @@
-const axios = require('axios')
 const dotenv = require('dotenv');
 dotenv.config()
 const APP_ID = process.env.APP_ID;
 const APP_KEY = process.env.APP_KEY;
+const timesApi = require('./apiCalls').timesApi
 
-const stationIdList = {
-  QueensRoadPeckham: '910GPCKHMQD'
-}
 
-module.exports = async function getTrainTimes (station, trainTimesPrinter) {
-  var stationId = stationIdList[station.station]
-  var apiUrl = `https://api.tfl.gov.uk/StopPoint/${stationId}/Arrivals?app_id=${APP_ID}&app_key=${APP_KEY}`
+module.exports = async function getTrainTimes (stationId, trainTimesPrinter) {
   var apiResponse;
-  await axios.get(apiUrl)
+  await timesApi.get(`${stationId}/Arrivals?app_id=${APP_ID}&app_key=${APP_KEY}`)
   .then(function (response) {
     apiResponse = response
+    console.log(trainTimesPrinter(response.data))
   })
   .catch(function (error) {
-    apiResponse = response
-  })
-  .finally(function () {
-    console.log(trainTimesPrinter(apiResponse.data))
+    console.log(error)
   })
   return apiResponse.data
 }
