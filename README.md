@@ -1,6 +1,6 @@
 # Train Times - WIP
 
-Train times is a node.js based app that can be run from the command line to fetch arrival times for overground and underground stations in London. You can pass in the station and have the arrival times for that station printed in your console.
+Train times is a node.js CLI tool that can be run from the command line to fetch train times for train/ tube stations in London. You can pass in the station and have the departure times for that station printed in your console.
 
 ## Tech
 * Node.js
