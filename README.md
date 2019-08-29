@@ -1,6 +1,6 @@
 # Train Times - WIP
 
-Train times is a node.js CLI tool that can be run from the command line to fetch train times for train/ tube stations in London. You can pass in the station and have the arrival times for that station printed in your console. It makes two API calls, one to get the ID for the station you entered and one to get the arrival times. 
+Train times is a node.js CLI tool that can be run from the command line to fetch train times for train/ tube stations in London. You can pass in the station and have the arrival times for that station printed in your console. It makes two API calls, one to get the ID for the station you entered and one to get the arrival times.
 
 ## Tech
 * Node.js
@@ -23,10 +23,6 @@ For a unix based system run chmod
 ```bash
 chmod +x bin/train-times
 ```
-To make the train-times command global run npm link
-```bash
-npm link
-```
 Lastly you'll need to sign up to TFL to get an API key. This API key you will store in .env file in the root of the directory.
 
 ```bash
@@ -34,12 +30,12 @@ touch .env
 ```
 inside that .env file you will store the keys like this:
 ```
-APP_ID=***Your app_id here
-APP_KEY=***Your app_key here
+APP_ID=<Your app_id here>
+APP_KEY=<Your app_key here>
 
 ```
 ## Usage
-The train-times command should be accessible globally so from anywhere in your terminal you can train-times --station yourNearestStationHere. It's important to not have any spaces in your station.
+The train-times command is accessible from the root train-times folder. In your terminal type train-times --station yourNearestStationHere. It's important to not have any spaces in your station.
 For example this will give you the overground train times for Queens Road Peckham Station
 ```
 $: train-times --station queensroadpeckham
@@ -57,7 +53,7 @@ Queens Road Peckham
 10. 09:46 Dalston Junction
 ```
 
-## Features
+## Future Features
 `Have arrrival times print out as 1st 2nd 3rd... instead of 1. 2. 3.....`
 
 `Extend search to rail stations and have national rail arrival times print out as well as tube trains`
