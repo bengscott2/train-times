@@ -9,11 +9,11 @@ module.exports = async function getTrainTimes (stationId, trainTimesPrinter) {
   var apiResponse;
   await timesApi.get(`${stationId}/Arrivals?app_id=${APP_ID}&app_key=${APP_KEY}`)
   .then(function (response) {
-    apiResponse = response
+    apiResponse = response.data
     console.log(trainTimesPrinter(response.data))
   })
   .catch(function (error) {
     console.log(error)
   })
-  return apiResponse.data
+  return apiResponse
 }
