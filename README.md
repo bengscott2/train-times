@@ -35,8 +35,8 @@ APP_KEY=<Your app_key here>
 
 ```
 ## Usage
-The train-times command is accessible from the root train-times folder. In your terminal type train-times --station yourNearestStationHere. It's important to not have any spaces in your station.
-For example this will give you the overground train times for Queens Road Peckham Station
+The train-times command is accessible from the root train-times folder. In your terminal type train-times --station yourNearestStationHere. It's important to not have any spaces in your station as well as the --station flag. You can also shortcut it to -s <stationname>
+For example this will give you the overground train times for Queens Road Peckham Station.
 ```
 $: train-times --station queensroadpeckham
 Queens Road Peckham

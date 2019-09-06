@@ -18,7 +18,8 @@ describe('#getStationId', function () {
               "id": "910GPCKHMQD",
               "name": "Queens Road Peckham Rail Station"
           }
-      ]
+      ],
+      total: 1
     })
     stationName = 'queensroadpeckham'
     var getTrainTimesMock = sinon.spy()
@@ -34,7 +35,8 @@ describe('#getStationId', function () {
               "id": "910GPCKHMQD",
               "name": "Queens Road Peckham Rail Station"
           }
-      ]
+      ],
+      total: 1
     })
     var stationName = 'queensroadpeckham'
     var getTrainTimesMock = sinon.spy()
