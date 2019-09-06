@@ -10,11 +10,13 @@ module.exports = async function getStationId (stationName, getTrainTimes) {
   var apiResponse;
   await idApi.get(`${stationName}?app_id=${APP_ID}&app_key=${APP_KEY}`)
   .then(function (response) {
-    apiResponse = response.data.matches[0].id
-    getTrainTimes(response.data.matches[0].id, trainTimesPrinter)
+    if (response.data.total > 0) {
+      getTrainTimes(response.data.matches[0].id, trainTimesPrinter)
+    } else {
+      console.log('The name of the station you entered returned 0 results');
+    }
   })
   .catch(function (error) {
     console.log(error.response)
   })
-  return apiResponse
 }
