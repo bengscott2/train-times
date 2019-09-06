@@ -11,7 +11,8 @@ module.exports = async function getStationId (stationName, getTrainTimes) {
   await idApi.get(`${stationName}?app_id=${APP_ID}&app_key=${APP_KEY}`)
   .then(function (response) {
     if (response.data.total > 0) {
-      getTrainTimes(response.data.matches[0].id, trainTimesPrinter)
+      apiResponse = response.data.matches[0].id
+      getTrainTimes(apiResponse, trainTimesPrinter)
     } else {
       console.log('The name of the station you entered returned 0 results');
     }
@@ -19,4 +20,5 @@ module.exports = async function getStationId (stationName, getTrainTimes) {
   .catch(function (error) {
     console.log(error.response)
   })
+  return apiResponse
 }
