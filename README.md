@@ -23,15 +23,22 @@ For a unix based system run chmod
 ```bash
 chmod +x bin/train-times
 ```
-Lastly you'll need to sign up to TFL to get an API key. This API key you will store in .env file in the root of the directory.
-
+Lastly you'll need to sign up to TFL to get an API key. The API key you're issued you will need to store in a .env file in the src folder directory.
+From within the root directory type in:
 ```bash
-touch .env
+touch src/.env
 ```
 inside that .env file you will store the keys like this:
 ```
 APP_ID=<Your app_id here>
 APP_KEY=<Your app_key here>
+
+```
+
+#### Make Train Times Global
+You can make it so that you can call train-times from anywhere in your file directory by adding it to your .bashrc file. To do this open up your `~/.bashrc` and add the following line with your correct path to the bin folder of this repo.
+```
+export PATH="$PATH:/your/local/path/to/train-times/bin"
 
 ```
 ## Usage
