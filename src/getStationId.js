@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-dotenv.config()
+dotenv.config({path: __dirname + '/.env'});
 const APP_ID = process.env.APP_ID;
 const APP_KEY = process.env.APP_KEY;
 const trainTimesPrinter = require('./trainTimesPrinter')
