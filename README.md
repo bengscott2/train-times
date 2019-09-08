@@ -36,7 +36,7 @@ APP_KEY=<Your app_key here>
 ```
 
 #### Make Train Times Global
-You can make it so that you can call train-times from anywhere in youur file directory by adding it to your .bashrc file. To do this open up your `~/.bashrc` and add the following line in with your correct path to the bin folder of this repo.
+You can make it so that you can call train-times from anywhere in your file directory by adding it to your .bashrc file. To do this open up your `~/.bashrc` and add the following line with your correct path to the bin folder of this repo.
 ```
 export PATH="$PATH:/your/local/path/to/train-times/bin"
 
